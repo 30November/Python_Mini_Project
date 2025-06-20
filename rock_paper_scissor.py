@@ -6,7 +6,9 @@ comp = p = 0 #comp , person
 while (max(comp,p) != no_of_pt):
     for i,e in enumerate(sym):
         print(f"{i+1}.{e}")
-    choose = int(input("Enter the choice (1-3):"))-1
+    choose = input("Enter the choice (1-3):")
+    choose = int(choose)-1 if choose.isdigit() else -1
+    
     if choose not in range(3):
         print("ENTER THE VALID CHOICE")
         continue
